@@ -1,0 +1,31 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Python: Current File",
+			"type": "python",
+			"request": "launch",
+			"program": "${file}",
+			"console": "integratedTerminal",
+			"env": {
+				//"PIGPIO_ADDR": "192.168.1.8" wired
+				"PIGPIO_ADDR": "192.168.2.105"
+
+			},
+			"justMyCode": true
+		},
+		{
+			"name": "Python: test_blink",
+			"type": "python",
+			"request": "launch",
+			"module": "test_blink17",
+			"env": {
+				"PIGPIO_ADDR": "192.168.1.33"
+			},
+			"justMyCode": true
+		}
+	]
+}
