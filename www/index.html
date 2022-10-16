@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Buzzy v1.0</title>
+	<style>
+		@import url(https://fonts.googleapis.com/css?family=Lato:300);
+
+		.keys {
+			font-family: 'Lato', sans-serif;
+			text-align: center;
+			width: 500px;
+			height: 200px;
+			margin: auto;
+		}
+
+		.arr {
+			cursor: pointer;
+			width: 100px;
+			height: 100px;
+			text-align: center;
+			line-height: 100px;
+			background: grey;
+			color: white;
+			font-size: 50px;
+			border-right: 10px solid darken(grey, 20);
+			border-bottom: 10px solid darken(grey, 20);
+			border-left: 10px solid darken(grey, 15);
+			border-top: 10px solid darken(grey, 10);
+			display: inline-block;
+			margin: 5px;
+			transition: all .05s linear;
+
+			user-select: none;
+		}
+
+		.arr:active {
+			border-bottom: 8px solid darken(grey, 20);
+			text-shadow: 0 0 10px white, 0 0 10px white, 0 0 20px white;
+			transform: translate(0, 2px);
+		}
+
+		.up {
+			position: relative;
+			top: -4px;
+		}
+
+		.pressed {
+			border-bottom: 8px solid darken(grey, 20);
+			text-shadow: 0 0 10px white;
+			transform: translate(0, 2px);
+		}
+	</style>
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+	<h1>I'm Buzzy.</h1>
+
+	Use WASD keys to control robot. <br>
+	<label id="opcode">...</label>
+	<br>
+	<div class="keys">
+		<div id="KeyW" class="up arr"><i class="fa fa-arrow-up"></i></div>
+		<br />
+		<div id="KeyS" class="left arr"><i class="fa fa-arrow-left"></i></div>
+		<div id="KeyA" class="down arr"><i class="fa fa-arrow-down"></i></div>
+		<div id="KeyD" class="right arr"><i class="fa fa-arrow-right"></i></div>
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>

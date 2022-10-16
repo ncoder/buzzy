@@ -1,0 +1,2 @@
+#pip install simple_websocket_server
+pip install websockets
