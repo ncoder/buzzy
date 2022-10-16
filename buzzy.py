@@ -3,9 +3,8 @@ from time import sleep
 
 from gpiozero import Motor
 
-#from buzzyio import LeftMotor, LeftMotorSensor, RightMotor, RightMotorSensor
-from buzzyiomock import (LeftMotor, LeftMotorSensor, RightMotor,
-                         RightMotorSensor)
+from buzzyio import LeftMotor, LeftMotorSensor, RightMotor, RightMotorSensor
+#from buzzyiomock import (LeftMotor, LeftMotorSensor, RightMotor, RightMotorSensor)
 from remote_control import getThrottle
 from server import listenForRemoteInput
 
