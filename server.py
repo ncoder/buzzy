@@ -80,9 +80,9 @@ async def listenForRemoteInput():
     # set first argument for the handler to current working directory
     handler = functools.partial(process_request,
                                 os.path.join(os.getcwd(), "www"))
-    await websockets.serve(control, '127.0.0.1', 8080, process_request=handler)
+    await websockets.serve(control, None, 8080, process_request=handler)
 
 
 if __name__ == "__main__":
-    asyncio.get_event_loop().run_until_complete(listenForRemoteInput)
+    asyncio.get_event_loop().run_until_complete(listenForRemoteInput())
     asyncio.get_event_loop().run_forever()
