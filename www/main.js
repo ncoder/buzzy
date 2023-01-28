@@ -39,6 +39,7 @@ function onKeyDown(e) {
 		case 'KeyD':
 			keystate[e.code] = true;
 			update(true)
+			e.preventDefault()
 	}
 }
 
@@ -54,6 +55,7 @@ function onKeyUp(e) {
 		case 'KeyD':
 			keystate[e.code] = false;
 			update(true)
+			e.preventDefault()
 	}
 }
 
@@ -65,6 +67,7 @@ function onButtonDown(e) {
 	this.setPointerCapture(e.pointerId);
 	keystate[this.id] = true;
 	update(true)
+	e.preventDefault()
 }
 
 /**
@@ -73,6 +76,7 @@ function onButtonDown(e) {
 function onButtonUp(e) {
 	keystate[this.id] = false;
 	update(true)
+	e.preventDefault()
 }
 
 
@@ -114,6 +118,9 @@ for (let arr of document.getElementsByClassName("arr")) {
 	var a = arr;
 	a.addEventListener("pointerdown", onButtonDown)
 	a.addEventListener("pointerup", onButtonUp)
+
+	// prevent long press right-click emulation from kicking in, causing the button to skick and the context menu to show up.
+	a.addEventListener("contextmenu", function (e) { e.preventDefault(); })
 }
 
 // setup and active update loop, so that we can keep actively sending keys.

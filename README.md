@@ -33,3 +33,5 @@ configure the environment to forward io ports to the robot.
 arp -a
 ```
 
+instead of using ip, try
+"raspberrypi.lan" hostname.
