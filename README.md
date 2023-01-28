@@ -35,3 +35,12 @@ arp -a
 
 instead of using ip, try
 "raspberrypi.lan" hostname.
+
+# deploy new code to device
+```
+ssh h@raspberrypi.lan
+(use password: password)
+cd buzzy
+git pull
+
+(restart the server if needed) (how?)
