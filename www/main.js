@@ -119,9 +119,9 @@ for (let arr of document.getElementsByClassName("arr")) {
 	a.addEventListener("pointerdown", onButtonDown)
 	a.addEventListener("pointerup", onButtonUp)
 
-	// prevent long press right-click emulation from kicking in, causing the button to skick and the context menu to show up.
-	a.addEventListener("contextmenu", function (e) { e.preventDefault(); })
 }
+// prevent long press right-click emulation from kicking in, causing the button to skick and the context menu to show up.
+window.addEventListener("contextmenu", function (e) { e.preventDefault(); })
 
 // setup and active update loop, so that we can keep actively sending keys.
 // the robot stops after 1 second of not receiving messages. 
